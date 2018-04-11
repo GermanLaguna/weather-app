@@ -35,12 +35,13 @@ class Search extends React.Component {
 				<p>
 					<Link
 						className='btn btn-success btn-space'
+						title="Get Weather"
 						to={ {
 							pathname: '/forecast',
 							search: '?city=' + this.state.city
 						} }
 					>
-						GetWeather
+						Get Weather
 					</Link>
 				</p>
 			</div>
