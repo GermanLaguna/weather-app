@@ -8,80 +8,80 @@ var Wheater = require('./Weather');
 var api = require('../utils/api');
 
 class Forecast extends React.Component {
-    constructor(props) {
-        super(props);
+	constructor(props) {
+		super(props);
 
-        this.state = {
-            forecast: null,
-            name: null,
-            loading: true,
-            error: false,
-        }
-    }
+		this.state = {
+			forecast: null,
+			name: null,
+			loading: true,
+			error: false,
+		}
+	}
 
-    componentDidMount() {
-        var city = queryString.parse(this.props.location.search);
+	componentDidMount() {
+		var city = queryString.parse(this.props.location.search);
 
-        if (city.city !== '') {
-            api.fetchForecast(city.city)
-            .then(function (forecast) {
-                if (forecast !== undefined) {
-                    this.setState(function () {
-                        return {
-                            forecast: forecast.list,
-                            name: forecast.city.name,
-                            loading: false,
-                            error: false
-                        }
-                    });
-                }
-                else {
-                    this.setState(function () {
-                        return {
-                            forecast: null,
-                            name: '',
-                            loading: true,
-                            error: true
-                        }
-                    });
-                }
-            }.bind(this) );
-        }
-        else {
-            this.setState(function () {
-                return {
-                    forecast: null,
-                    name: '',
-                    loading: true,
-                    error: true
-                }
-            });
-        }
-    }
+		if (city.city !== '') {
+			api.fetchForecast(city.city)
+			.then(function (forecast) {
+				if (forecast !== undefined) {
+					this.setState(function () {
+						return {
+							forecast: forecast.list,
+							name: forecast.city.name,
+							loading: false,
+							error: false
+						}
+					});
+				}
+				else {
+					this.setState(function () {
+						return {
+							forecast: null,
+							name: '',
+							loading: true,
+							error: true
+						}
+					});
+				}
+			}.bind(this) );
+		}
+		else {
+			this.setState(function () {
+				return {
+					forecast: null,
+					name: '',
+					loading: true,
+					error: true
+				}
+			});
+		}
+	}
 
-    render() {
-        var forecast = this.state.forecast;
-        var name = this.state.name;
-        var loading = this.state.loading;
-        var error = this.state.error;
+	render() {
+		var forecast = this.state.forecast;
+		var name = this.state.name;
+		var loading = this.state.loading;
+		var error = this.state.error;
 
-        if (loading) {
-            return <Loading />
-        }
-        else if (error) {
-            return <Home />
-        }
+		if (loading) {
+			return <Loading />
+		}
+		else if (error) {
+			return <Home />
+		}
 
-        return (
-            <div>
-                <h2 className="forecast-header">{name}</h2>
-                <Wheater
-                    forecast={forecast}
-                    city={name}
-                />
-            </div>
-        )
-    }
+		return (
+			<div>
+			<h2 className="forecast-header">{name}</h2>
+			<Wheater
+			forecast={forecast}
+			city={name}
+			/>
+			</div>
+		)
+	}
 }
 
 module.exports = Forecast;

@@ -10,28 +10,27 @@ var Forecast = require('./Forecast');
 var Details = require('./Details');
 
 class App extends React.Component {
-    render() {
-        return (
-            <Router>
-                <div className='container'>
-                    <Header />
-
-                    <Switch>
-                        <Route exact path='/' component={Home} />
-                        <Route path='/forecast' component={Forecast} />
-                        <Route path='/details' component={Details} />
-                        <Route
-                            render = {
-                                function () {
-                                    return <p>Not Found</p>
-                                }
-                            }
-                        />
-                    </Switch>
-                </div>
-            </Router>
-        )
-    }
+	render() {
+		return (
+			<Router>
+				<div className='container'>
+					<Header />
+					<Switch>
+						<Route exact path='/' component={Home} />
+						<Route path='/forecast' component={Forecast} />
+						<Route path='/details' component={Details} />
+						<Route
+						render = {
+							function () {
+								return <p>Not Found</p>
+							}
+						}
+						/>
+					</Switch>
+				</div>
+			</Router>
+		)
+	}
 }
 
 module.exports = App;
