@@ -24,7 +24,6 @@ class Forecast extends React.Component {
 
 		api.fetchForecast(city.city)
 		.then(function (forecast) {
-			console.log(forecast);
 			if (forecast !== undefined) {
 				this.setState(function () {
 					return {

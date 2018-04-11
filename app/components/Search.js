@@ -7,8 +7,11 @@ class Search extends React.Component {
 		super(props);
 
 		this.state = {
-			city: ''
+			city: '',
+			submitted: false
 		};
+
+		this.getWeather = React.createRef();
 	}
 
 	handleChange = (event) => {
@@ -23,7 +26,10 @@ class Search extends React.Component {
 
 	handleKeyPress = (event) => {
 		if(event.key == 'Enter'){
-			console.log(this);
+			// this.props.history.push({
+			// 	pathname: '/forecast',
+			// 	search: '?city=' + this.state.city
+			// })
 		}
 	}
 
