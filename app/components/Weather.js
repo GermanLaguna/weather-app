@@ -22,22 +22,22 @@ class Wheater extends React.Component {
 
 			return name_day + ', ' + name_month + ' ' + day;
 		}
-		
+
 		return (
 			<div className="forecast-container">
 			{ this.props.forecast.map(function (forecast, index) {
 				var day = getDate(index);
 				return (
 					<Link
-					to={ {
-						pathname: '/details/' + city,
-						state: { city: city, day: day, forecast: forecast }
-					} }
-					key={index}
-					className="dayContainer"
+						to={ {
+							pathname: '/details/' + city,
+							state: { city: city, day: day, forecast: forecast }
+						} }
+						key={index}
+						className="dayContainer"
 					>
-					<img className="weather" src={"https://res.cloudinary.com/glwdev/image/upload/v1523383448/weather-app/images/weather-icons/" + forecast.weather[0].icon + ".svg"} alt="Weather"/>
-					<h2 className="subheader">{day}</h2>
+						<img className="weather" src={"https://res.cloudinary.com/glwdev/image/upload/v1523383448/weather-app/images/weather-icons/" + forecast.weather[0].icon + ".svg"} alt="Weather"/>
+						<h2 className="subheader">{day}</h2>
 					</Link>
 				)
 			})

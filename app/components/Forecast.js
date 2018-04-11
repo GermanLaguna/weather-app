@@ -74,11 +74,11 @@ class Forecast extends React.Component {
 
 		return (
 			<div>
-			<h2 className="forecast-header">{name}</h2>
-			<Wheater
-			forecast={forecast}
-			city={name}
-			/>
+				<h2 className="forecast-header">{name}</h2>
+				<Wheater
+					forecast={forecast}
+					city={name}
+				/>
 			</div>
 		)
 	}

@@ -18,17 +18,17 @@ class Details extends React.Component {
 
 		return (
 			<div>
-			<div className="dayContainer">
-			<img className="weather" src={"https://res.cloudinary.com/glwdev/image/upload/v1523383448/weather-app/images/weather-icons/" + forecast.weather[0].icon + ".svg"} alt="Weather"/>
-			<h2 className="subheader">{day}</h2>
-			</div>
-			<div className="description-container">
-			<p>{city}</p>
-			<p>{forecast.weather[0].description}</p>
-			<p>min temp: {forecast.temp.min} degrees</p>
-			<p>max temp: {forecast.temp.max}  degrees</p>
-			<p>humidity: {forecast.humidity} </p>
-			</div>
+				<div className="dayContainer">
+					<img className="weather" src={"https://res.cloudinary.com/glwdev/image/upload/v1523383448/weather-app/images/weather-icons/" + forecast.weather[0].icon + ".svg"} alt="Weather"/>
+					<h2 className="subheader">{day}</h2>
+				</div>
+				<div className="description-container">
+					<p>{city}</p>
+					<p>{forecast.weather[0].description}</p>
+					<p>min temp: {forecast.temp.min} degrees</p>
+					<p>max temp: {forecast.temp.max}  degrees</p>
+					<p>humidity: {forecast.humidity} </p>
+				</div>
 			</div>
 		)
 	}

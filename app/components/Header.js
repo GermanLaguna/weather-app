@@ -27,16 +27,16 @@ class Header extends React.Component {
 
 		return (
 			<div className="header">
-			<h1>Clever Title</h1>
-			<div className="search search-box">
-			<City
-			city={city}
-			onChange={this.handleChange}
-			/>
-			<Consult
-			city={city}
-			/>
-			</div>
+				<h1>Clever Title</h1>
+				<div className="search search-box">
+				<City
+					city={city}
+					onChange={this.handleChange}
+				/>
+				<Consult
+					city={city}
+				/>
+				</div>
 			</div>
 		)
 	}

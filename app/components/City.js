@@ -29,12 +29,12 @@ class City extends React.Component {
 	render() {
 		return (
 			<input
-			className="city"
-			placeholder='St. George, Utah'
-			type='text'
-			value={this.state.city}
-			autoComplete='off'
-			onChange={this.handleChange}
+				className="city"
+				placeholder='St. George, Utah'
+				type='text'
+				value={this.state.city}
+				autoComplete='off'
+				onChange={this.handleChange}
 			/>
 		)
 	}
