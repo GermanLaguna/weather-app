@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router-dom').Link;
 
 var City = require('./City');
 var Consult = require('./Consult');
@@ -27,7 +28,13 @@ class Header extends React.Component {
 
 		return (
 			<div className="header">
-				<h1>Clever Title</h1>
+				<Link
+					className="header-title"
+					title="Go to Home"
+					to= '/'
+				>
+					<h1>Clever Title</h1>
+				</Link>
 				<div className="search search-box">
 				<City
 					city={city}

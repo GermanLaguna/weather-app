@@ -12,11 +12,11 @@ class Consult extends React.Component {
 		return (
 			<p>
 				<Link
-				className='btn btn-success btn-space'
-				to={ {
-					pathname: '/forecast',
-					search: '?city=' + this.props.city
-				} }
+					className='btn btn-success btn-space'
+					to={ {
+						pathname: '/forecast',
+						search: '?city=' + this.props.city
+					} }
 				>
 					GetWeather
 				</Link>
