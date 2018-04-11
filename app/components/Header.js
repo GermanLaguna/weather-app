@@ -1,8 +1,7 @@
 var React = require('react');
 var Link = require('react-router-dom').Link;
 
-var City = require('./City');
-var Consult = require('./Consult');
+var Search = require('./Search');
 
 class Header extends React.Component {
 	constructor(props) {
@@ -35,15 +34,7 @@ class Header extends React.Component {
 				>
 					<h1>Clever Title</h1>
 				</Link>
-				<div className="search search-box">
-					<City
-						city={city}
-						onChange={this.handleChange}
-					/>
-					<Consult
-						city={city}
-					/>
-				</div>
+				<Search mode="search search-box" />
 			</header>
 		)
 	}

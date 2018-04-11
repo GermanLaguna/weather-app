@@ -1,7 +1,6 @@
 var React = require('react');
 
-var City = require('./City');
-var Consult = require('./Consult');
+var Search = require('./Search');
 
 class Home extends React.Component {
 	constructor(props) {
@@ -28,17 +27,7 @@ class Home extends React.Component {
 		return (
 			<section className="home-container home-desing">
 				<h2 className="title">Enter a City and State</h2>
-				<div className="search search-column">
-					<City
-						city={city}
-						onChange={this.handleChange}
-					/>
-					</div>
-					<div>
-						<Consult
-						city={city}
-					/>
-				</div>
+				<Search mode="search search-column" />
 			</section>
 		)
 	}
