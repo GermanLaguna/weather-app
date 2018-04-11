@@ -21,6 +21,18 @@ class Search extends React.Component {
 		});
 	}
 
+	handleKeyPress = (event) => {
+		if(event.key == 'Enter'){
+			console.log(this);
+		}
+	}
+
+	handleClick = (event) => {
+		if(this.state.city === ''){
+			event.preventDefault();
+		}
+	}
+
 	render() {
 		return (
 			<div className={this.props.mode}>
@@ -31,6 +43,7 @@ class Search extends React.Component {
 					value={this.state.city}
 					autoComplete='off'
 					onChange={this.handleChange}
+					onKeyPress={this.handleKeyPress}
 				/>
 				<p>
 					<Link
@@ -40,6 +53,7 @@ class Search extends React.Component {
 							pathname: '/forecast',
 							search: '?city=' + this.state.city
 						} }
+						onClick={this.handleClick}
 					>
 						Get Weather
 					</Link>

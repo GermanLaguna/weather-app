@@ -19,6 +19,7 @@ class App extends React.Component {
 						<Route exact path='/' component={Home} />
 						<Route path='/forecast' component={Forecast} />
 						<Route path='/details' component={Details} />
+						<Route path='/NotFound' component={Details} />
 						<Route
 						render = {
 							function () {

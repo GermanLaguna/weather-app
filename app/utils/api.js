@@ -8,6 +8,9 @@ module.exports = {
         return axios.get(encodedURI)
         .then(function (response) {
             return response.data;
+        })
+        .catch(function (error) {
+            console.log("Error", error);
         });
     }
 };
