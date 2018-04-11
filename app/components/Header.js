@@ -27,7 +27,7 @@ class Header extends React.Component {
 		var city = this.state.city;
 
 		return (
-			<div className="header">
+			<header className="header">
 				<Link
 					className="header-title"
 					title="Go to Home"
@@ -36,15 +36,15 @@ class Header extends React.Component {
 					<h1>Clever Title</h1>
 				</Link>
 				<div className="search search-box">
-				<City
-					city={city}
-					onChange={this.handleChange}
-				/>
-				<Consult
-					city={city}
-				/>
+					<City
+						city={city}
+						onChange={this.handleChange}
+					/>
+					<Consult
+						city={city}
+					/>
 				</div>
-			</div>
+			</header>
 		)
 	}
 }

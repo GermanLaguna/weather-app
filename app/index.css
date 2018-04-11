@@ -180,3 +180,8 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+.description-container h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}

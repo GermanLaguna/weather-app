@@ -37,7 +37,7 @@ class Wheater extends React.Component {
 						className="dayContainer"
 					>
 						<img className="weather" src={"https://res.cloudinary.com/glwdev/image/upload/v1523383448/weather-app/images/weather-icons/" + forecast.weather[0].icon + ".svg"} alt="Weather"/>
-						<h2 className="subheader">{day}</h2>
+						<h3 className="subheader">{day}</h3>
 					</Link>
 				)
 			})
