@@ -14,7 +14,8 @@
     "babel": {
         "presets": [
             "env",
-            "react"
+            "react",
+            "stage-0"
         ]
     },
     "devDependencies": {

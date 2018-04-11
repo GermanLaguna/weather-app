@@ -21,7 +21,6 @@ class Forecast extends React.Component {
 
 	componentDidMount() {
 		var city = queryString.parse(this.props.location.search);
-
 		if (city.city !== '') {
 			api.fetchForecast(city.city)
 			.then(function (forecast) {

@@ -7,13 +7,11 @@ class Search extends React.Component {
 		super(props);
 
 		this.state = {
-			city: this.props.city
+			city: ''
 		};
-
-		this.handleChange = this.handleChange.bind(this);
 	}
 
-	handleChange(event) {
+	handleChange = (event) => {
 		var value = event.target.value;
 
 		this.setState(function () {
